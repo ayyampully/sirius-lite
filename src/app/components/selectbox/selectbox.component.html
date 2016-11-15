@@ -1,0 +1,19 @@
+<div class="autocomplete-wrap" [class.active]="showList" [class.editOverlay]="editOverlay" ><div (click)="showAutoComplete($event)"><span class="capitalize">{{label}}
+  </span><i class="fa fa-chevron-down drop-arrow" aria-hidden="true"></i></div>
+  <div *ngIf="showList" class="autocomplete">
+    
+    <div *ngIf="autoClt.length==0">
+      
+      <!--<button (click)="saveLabel"><i class="fa fa-check" aria-hidden="true"></i></button>
+      <input #term (keyup)="search(term.value)" class="text" type="text" placeholder="Search"/>  
+      <ul>
+        <li (click)="setLabel(searchItem)" *ngFor="let searchItem of searchItems | async">{{searchItem}} </li>
+      </ul>-->
+    </div>
+    <div *ngIf="autoClt.length">
+      <ul>
+        <li (click)="setLabel(item)" *ngFor="let item of autoClt">{{item.label}} <i [class]="item.class" aria-hidden="true"></i></li>
+      </ul>
+    </div>
+  </div>
+</div>

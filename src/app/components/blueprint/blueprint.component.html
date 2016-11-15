@@ -1,0 +1,17 @@
+<div class="sprint-box" *ngIf="ticketsGrouped">
+  <div class="col" *ngFor="let group of ticketsGrouped">
+    <span *ngFor="let ticket of group" [attr.class]="ticket.status"></span>
+    
+  </div>
+ 
+</div>
+<div class="sprint-legends">
+  <p class="status">On schedule</p>
+  <ul class="legends">
+    <li><span class="open"></span> Open ticket</li>
+    <li><span class="completed"></span> Completed</li>
+    <li><span class="progress"></span> In progress</li>
+    <li><span class="unassigned"></span> Unassigned</li>
+    <li><span class="behind"></span> Behind schedule</li>
+  </ul>
+</div>

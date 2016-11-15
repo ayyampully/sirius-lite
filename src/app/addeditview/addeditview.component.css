@@ -1,0 +1,26 @@
+.editview-overlay{position: absolute;
+    top: 87px;
+    left: 20%;
+    min-height: 450px;
+    height: calc(100% - 107px);
+    width: 60%;
+    z-index: 3;
+    border: 1px solid #c7dbe4;
+    background: #f9f9f9;
+    border-radius: 2px;}
+.overlay-header{padding: 15px 20px; float: left; width: 100%;
+    background: #e2ebef;}
+.overlay-header h4{    float: left;
+    font-size: 16px;
+    font-family: 'open_sanssemibold';}
+.overlay-header h4 span{font-family: 'open_sansregular';}
+.overlay-header .close{ float: right;
+    font-size: 20px;} .overlay-header .close .fa{float: left}
+.overlay-body{padding: 15px 20px; float: left; width: 100%;}
+.overlay-footer{position: absolute;
+    bottom: 0; padding: 15px 20px; width: 100%
+}
+.overlay-footer .actions{float: right}
+.overlay-footer .actions .btn{margin-left: 15px}
+.overlay-body .row{float: left; width:100%; margin-top: 20px;}
+.overlay-body label{ float: left; width: 20%; text-align: right; padding: 8px 15px 0 0;}

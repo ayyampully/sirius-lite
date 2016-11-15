@@ -1,0 +1,49 @@
+<app-addeditview *ngIf="showEditView" [ticketDetails]="ticketDetails" (ticketUpdated)="afterUpdate($event)"></app-addeditview>
+
+<div class="detailview-wrap" *ngIf="ticketDetails" [class.blur]="showEditView">
+  <div class="detailview box-3">
+    <div class="header">
+      <span class="icon">{{ticketDetails.project.icon}}</span>
+      <div class="title-wrap">
+        <p class="breadcrumb"><a>{{ticketDetails.project.title}}/</a>{{ticketDetails.ticketid}}</p>
+        <h2>{{ticketDetails.title}}</h2>
+      </div>
+
+      <span class="edit-btn" (click)="editTicket()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+    </div>
+    <div class="details">
+        <ul class="list">
+          <li><label>Status:</label> <span class="status {{ticketDetails.status}}" >{{ticketDetails.status}}</span></li>
+          <li><label>Ticket type:</label> <app-selectbox [label]="ticketDetails.type" [serviceType]="'type'"></app-selectbox> </li>
+          <li><label>Priority:</label> <app-selectbox [label]="ticketDetails.priority" [serviceType]="'priority'"></app-selectbox> </li>
+        </ul>
+        <ul  class="list">
+          <li><label>Reported by:</label> <span>{{ticketDetails.createdby.name}}</span> </li>
+          <li><label>Assigned to:</label> <app-searchbox [label]="ticketDetails.assignedto.name" [serviceType]="'user'"></app-searchbox> </li>
+        </ul>
+        <ul  class="list">
+          <li><label>Created date:</label> <span>{{ticketDetails.createddate | date:"MM/dd/yyyy HH:mm"}}</span></li>
+          <li><label>Last modified:</label> <span>{{ticketDetails.modifiedddate | date:"MM/dd/yyyy HH:mm"}}</span></li>
+        </ul>
+    </div>
+    <div class="details">
+      <h4>Description</h4>
+      <p [innerHTML]="ticketDetails.description"></p>
+    </div>
+    <div class="details" *ngIf="ticketDetails.attachments.length">
+      <h4>Attachments</h4>
+      <p>{{ticketDetails.attachments}}</p>
+    </div>
+    <div class="details">
+      <h4>Comments</h4>
+      <app-comments [comments]="ticketDetails.comments"></app-comments>
+    </div>
+  </div>
+  <div class="watchers-wrap box-1">
+    <h2>Watchers</h2>
+    <ul>
+      <li *ngFor="let watcher of ticketDetails.watchers; let i = index"><span class="icon color-{{i}}">{{watcher.icon}}</span> {{watcher.name.last}}, {{watcher.name.first}} </li>
+    </ul>
+  </div>
+</div>
+<h4 *ngIf="errmsg">{{errmsg.message}}</h4>

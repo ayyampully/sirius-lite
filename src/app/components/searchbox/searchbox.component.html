@@ -1,0 +1,10 @@
+<div class="user-select-wrap" [class.active]="!label">
+  <div class="input-area">
+    <span *ngIf="label" class="tag">{{label}} <i (click)="label=''" class="fa fa-times close" aria-hidden="true"></i></span> 
+    <div class="auto-complete" *ngIf="!label">
+      <input type="text" placeholder="Type here.."  #term (keyup)="search(term.value)" />
+      <ul><li (click)="label=searchItem.name.last+', '+searchItem.name.first" *ngFor="let searchItem of searchItems | async">{{searchItem.name.first}} {{searchItem.name.last}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

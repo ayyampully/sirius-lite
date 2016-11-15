@@ -1,0 +1,37 @@
+<div class="list-wrapper" *ngIf="ticketList">
+    <aside class="nav-list">
+        <h4 class="inner-title">{{ticketList.title}}</h4>
+        <h6 class="inner-title-sub">Admin: {{ticketList.owner.name}}</h6>
+        <button class="btn">Add new item</button>
+        <ul class="modules">
+            <li *ngFor="let module of ticketList.modules">{{module.label}} <span>{{module.count}}</span></li>
+        </ul>
+    </aside>
+    <section class="list-view">
+        <div class="review-box"><app-blueprint [tickets]="ticketList.tickets"></app-blueprint></div>
+        <div class="table">
+            <table cellspacing="0" cellpadding="0">
+                <thead><tr>
+                    <th class="checkbox"><input type="checkbox" name="select-all" id="selectAll"/></th>
+                    <th>Title</th>
+                    <th>Created by</th>
+                    <th>Last modified</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                </tr></thead>
+                <tbody>
+                    <tr *ngFor="let ticket of ticketList.tickets">
+                        <td class="checkbox"><input type="checkbox" name="select-item"/></td>
+                        <td><a (click)="gotoDetails(ticket.ticketid)"><span>{{ticket.ticketid}}</span>- {{ticket.title}}</a></td>
+                        <td>{{ticket.createdby.name}}</td>
+                        <td>{{ticket.modifiedddate | date:"short" }}</td>
+                        <td class="capitalize">{{ticket.priority}}</td>
+                        <td class="capitalize">{{ticket.status}}</td>
+                    </tr>
+                     
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="filter"> </div>
+</div>

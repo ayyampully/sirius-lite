@@ -1,0 +1,23 @@
+<div class="svg-wrap scaled" *ngIf="projectData">
+    <h4>{{projectData.label}}</h4>
+    <svg class="pie-chart" width="200" height="200" aria-label="A chart." style="overflow: hidden;">
+        <g *ngIf="isFullCircle">
+            <circle  cx="100" cy="100" r="92" [attr.fill]="isFullCircle" stroke="#f9f9f9" stroke-width="1"></circle>
+            
+        </g>
+        <g *ngIf="!isFullCircle">
+            <g *ngFor="let data of svgpath" [attr.class]="data.cssClass">
+                <path [attr.d]="data.path" class="tooltip svgpath" [attr.data-value]="data.dataValue"
+                    [attr.fill]="data.color" stroke="#f9f9f9" stroke-width="1"></path>
+            </g>
+        </g>
+        <g> <circle cx="100" cy="100" r="40" fill="#f9f9f9" stroke="#f9f9f9" stroke-width="1"></circle></g>
+    </svg>
+    <div class="total"><span>{{projectData.total}}</span>Total </div>
+    <ul class="legends">
+        <li *ngFor="let data of projectData.data" [attr.data-class]="data.cssClass" class="legends-item">
+            <span>{{data.count}}</span>{{data.label}}
+        </li>
+    </ul>
+    <a (click)="gotoDetails()" class="view-more">View Details</a>
+</div>

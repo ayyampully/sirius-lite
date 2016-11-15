@@ -1,0 +1,22 @@
+[{
+    "title":"Demigod v1.0.0",
+    "projectid": 1,
+    "flagurl":"https://travis-ci.org/ayyampully/jsplay.svg?branch=master",
+    "year":2015,
+    "tasks": {
+        "label":"Tasks",
+        "data":[{"label":"Done","count":10}, {"label":"In Progress","count":4}, {"label":"Pending","count":6}], 
+        "total":20,
+        "dataid":"1"
+    },
+    "tickets": {
+        "label":"Tickets",
+        "data":[{"label":"Done","count":4}, {"label":"In Progress","count":1}, {"label":"Pending","count":1}], 
+        "total":6,
+        "dataid":"2"
+    },
+    "owner":"rohith.ayyampully@gmail.com",
+    "coowner":"jango@123",
+    "team":[],
+    "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. "
+}];

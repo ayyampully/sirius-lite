@@ -1,5 +1,5 @@
 {
-  "name": "test-app",
+  "name": "sirius-lite",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~2.1.0",
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
+    "@types/jquery": "^2.0.34",
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
@@ -37,6 +38,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
+    "mongoose": "^4.6.7",
     "protractor": "4.0.9",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",

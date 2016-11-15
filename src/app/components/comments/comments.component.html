@@ -1,0 +1,15 @@
+ <div class="comments-wrap">
+  <div class="comments-list" *ngIf="comments">
+    <div class="comment" *ngFor="let comment of comments"> <span class="comment-icon">RA</span> 
+    <div class="comment-body">
+      <label class="user"><span>{{comment.createdby.name}}</span> wrote:</label>
+      <span class="time">{{comment.createddate | commentdate}}</span>
+      <p [innerHTML]="comment.message"></p></div>
+    </div>
+  </div>
+
+  <div class="comments-add-form">
+    <textarea placeholder="Add your comment here" class="text" id="comments" #newcomment></textarea><button (click)="addCommentHandler(newcomment)" class="btn">Send</button>
+  </div>
+  
+</div>

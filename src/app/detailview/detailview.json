@@ -1,0 +1,46 @@
+{
+    "project":{
+        "title":"Demigod v1.0.0",
+        "projectid": 1,
+        "owner":{
+            "uid":1,
+            "login":"rohith.ayyampully@gmail.com",
+            "name":"Ayyampully, Rohith"
+        },
+        "coowner":"jango@123"
+    },
+    "title":"Please add the thumbail for users",
+    "ticketid":"DEMI01",
+    "createddate": "Thr, 30 Jun 2016 12:05:25 GMT",
+    "modifiedddate": "Fri, 01 Jul 2016 16:48:09 GMT",
+    "createdby":{
+        "uid":1,
+        "login":"rohith.ayyampully@gmail.com",
+        "name":"Ayyampully, Rohith"
+    },
+    "assignedto":{
+        "uid":2,
+        "login":"koenigsegg.agera@gmail.com",
+        "name":"Agera, koenigsegg"
+    },
+    "status":"open",
+    "type":"feature",
+    "priority":"Medium",
+    "watchers":[{
+                "uid":1,
+                "login":"rohith.ayyampully@gmail.com",
+                "name":"Ayyampully, Rohith"
+            },{
+                "uid":2,
+                "login":"rohith.ayyampully@gmail.com",
+                "name":"Agera, koenigsegg"
+            }
+    ],
+    "attachments":[],
+    "subtickets":[],
+    "tags":["UI","Image","Design","User"],
+    "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model",
+    "comments":[
+        {"createdby":"rohith.ayyampully@gmail.com","createddate": "Thr, 30 Jun 2016 12:05:25 GMT","message":"jangos everywhere"}
+    ]    
+   }

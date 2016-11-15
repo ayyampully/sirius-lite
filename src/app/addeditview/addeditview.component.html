@@ -1,0 +1,25 @@
+<div class="editview-overlay">
+  <div class="overlay-header">
+    <h4>Edit: <span>{{ticketDetails.ticketid}}</span></h4>
+    <span class="close" (click)="closeOverlay()"><i class="fa fa-times close" aria-hidden="true"></i></span>
+  </div>
+  <div class="overlay-body">
+      <div class="row">
+        <label for="title">Title</label><input class="text" id="title" [(ngModel)]="editedTicket.title" type="text" />
+      </div>
+      <div class="row">
+        <label for="type">Issue type</label>
+          <app-selectbox [label]="ticketDetails.type" [serviceType]="'type'" [editOverlay]="true"></app-selectbox> 
+      </div>
+      <div class="row">
+        <label for="priority">Priority</label>
+          <app-selectbox [label]="ticketDetails.priority" [serviceType]="'priority'" [editOverlay]="true"></app-selectbox> 
+      </div>
+      <div class="row">
+        <label for="description">Description</label><textarea class="text" id="description" [(ngModel)]="editedTicket.description"></textarea>
+      </div>
+  </div>
+  <div class="overlay-footer">
+    <div class="actions"><a (click)="closeOverlay()">Cancel</a><button type="submit" (click)="updateTicket()" class="btn">Update</button></div>
+</div>
+</div>

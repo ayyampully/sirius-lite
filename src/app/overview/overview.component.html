@@ -1,0 +1,40 @@
+<div class="overview" *ngIf="projectData">
+  <div class="row"> <div class="box-2">
+    <h1>{{projectData.title}} <span><img src="{{projectData.flagurl}}" /></span></h1>
+    <p>{{projectData.description}}</p>
+  </div>
+  <div class="box-4 notifications">
+    <ul>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> added <a>Agera</a> to project blah blah.</p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      <li><span>RA</span> <p><a>Ayyampully, Rohith</a> updated <a>DEMIGOD-1</a></p> </li>
+      </ul>
+  </div>
+  <div class="box-4 members">
+      <h4>Members</h4>
+      <ul>
+        <li *ngFor="let member of projectData.team; let i = index">
+          <span class="icon color-{{i}}">{{member.icon}}</span> 
+          <div class="desc"><p>{{member.name.last}}, {{member.name.first}}</p> <span>{{member.role}}</span></div>
+        </li>
+      </ul>
+  </div>
+  </div>
+ <div class="row">
+   <div class="box-2 sprint-review">
+      <h4>Sprint review</h4>
+      
+  </div>
+  <app-chartbox [projectData]="projectData.features" [projectid]="projectData.projectid" ></app-chartbox>
+  <app-chartbox [projectData]="projectData.bugs" [projectid]="projectData.projectid"></app-chartbox>
+ </div>
+</div>
